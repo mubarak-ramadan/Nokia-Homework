@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: homework
+    namespace: default
+spec:
+    replica: 1
+    selector:
+      matchLabels:
+      bb: web
+    template:
+      metadata:
+      labels:
+        bb: web
+    spec:
+      container:
+      - name:
+        image: fast-api-meal:latest
+        ports:
+          - name: 
+            containerPort: 8000
+
+
